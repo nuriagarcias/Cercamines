@@ -10,23 +10,8 @@ function inicialitzarMatriu() {
     }
 }
 
-function dibuixar(tipus) {
+function netejar() {
     inicialitzarMatriu();
-
-    for (let i = 0; i < mida; i++) {
-        for (let j = 0; j < mida; j++) {
-
-            if (tipus === 'creu') {
-                if (i === 4 || j === 4) matriu[i][j] = 1;
-            }
-            else if (tipus === 'escacs') {
-                if ((i + j) % 2 === 0) matriu[i][j] = 1;
-            }
-            else if (tipus === 'diagonal') {
-                if (i === j) matriu[i][j] = 1;
-            }
-        }
-    }
     renderitzar();
 }
 
@@ -51,4 +36,4 @@ function renderitzar() {
 }
 
 // Arrancada inicial
-dibuixar('netejar');
+netejar();
