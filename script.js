@@ -1,5 +1,11 @@
 const mida = 10;
 let matriu = [];
+let mines = 15;
+
+// Arrancada inicial
+inicialitzarMatriu();
+renderitzar();
+
 
 function inicialitzarMatriu() {
     for (let i = 0; i < mida; i++) {
@@ -10,8 +16,14 @@ function inicialitzarMatriu() {
     }
 }
 
+//Funció que calcularà on estan ubicades les mines
+function colocarMines(){
+
+}
+
 function netejar() {
     inicialitzarMatriu();
+
     renderitzar();
 }
 
@@ -35,5 +47,3 @@ function renderitzar() {
     }
 }
 
-// Arrancada inicial
-netejar();

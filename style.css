@@ -1,6 +1,6 @@
 body {
-    background-color: #1a1a1a;
-    color: white;
+    background-color: #e6dcdc;
+    color: black;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@ body {
 .cell {
     width: 30px;
     height: 30px;
-    background-color: #000; /* Color per defecte (fons) */
+    background-color: white; /* Color per defecte (fons) */
     transition: background-color 0.3s;
 }
 
