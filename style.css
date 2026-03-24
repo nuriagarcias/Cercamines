@@ -1,6 +1,6 @@
 body {
-    background-color: #e6dcdc;
-    color: black;
+    background-color: #dce1e6;
+    color: #001e4c;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -18,20 +18,30 @@ body {
     grid-template-columns: repeat(10, 30px); /* 10 columnes de 30px */
     grid-template-rows: repeat(10, 30px);    /* 10 files de 30px */
     gap: 2px; /* Espai entre cel·les */
-    border: 5px solid #333;
-    background-color: #333;
+    border-radius: 10px;
+    border: 5px solid #00367a;
+    background-color: #4890c8;
 }
 
 /* Estil base de cada cel·la */
 .cell {
     width: 30px;
     height: 30px;
+    border-radius: 3px;
     background-color: white; /* Color per defecte (fons) */
     transition: background-color 0.3s;
+}
+.cell:hover {
+    background-color: rgb(204, 218, 255);
 }
 
 /* Color quan la cel·la està "pintada" */
 .cell.active {
-    background-color: #00ff00; /* Verd fluorescent */
-    box-shadow: inset 0 0 10px #000;
+    background-color: #b4e1ff; /* Verd fluorescent */
+    box-shadow: inset 0 0 10px #7ccdff;
+}
+
+.cell.bomba {
+    background-color: #ff7caa; /* Verd fluorescent */
+    box-shadow: inset 0 0 10px #ff9d77;
 }

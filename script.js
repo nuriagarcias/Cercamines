@@ -18,14 +18,29 @@ function inicialitzarMatriu() {
 
 //Funció que calcularà on estan ubicades les mines
 function colocarMines(){
-
-}
-
-function netejar() {
     inicialitzarMatriu();
+    for(let i=0; i < mines; i++) {
+        let x=Math.trunc(mida*Math.random());
+        let y=Math.trunc(mida*Math.random());
+        console.log(x,y);
+        if(matriu[x][y] === 0){
+            matriu[x][y] = 1;
+        } else{
+            i--
+        }
 
+        matriu[x][y] = 1;
+    }
     renderitzar();
 }
+
+
+
+// function netejar() {
+//     inicialitzarMatriu();
+//
+//     renderitzar();
+// }
 
 // Aquesta funció "dibuixa" els DIVs a l'HTML
 function renderitzar() {
@@ -38,12 +53,50 @@ function renderitzar() {
             div.classList.add('cell');
 
             // Si a la matriu hi ha un 1, afegim la classe 'active' (color verd)
-            if (matriu[i][j] === 1) {
+            if (matriu[i][j] === 2) {
                 div.classList.add('active');
             }
+            else if (matriu[i][j] === 1) {
+                div.classList.add('bomba');
+            }
+            div.addEventListener('click', function () {
+
+                if (matriu[i][j] === 1) {
+                    alert('boom')
+                    inicialitzarMatriu();
+                } else {
+                    calcular()
+                    console.log(comptador);
+                }
+                renderitzar();
+            })
 
             container.appendChild(div);
         }
     }
-}
+
+    }
+
+    function calcular(){
+        let comptador=0
+        if(matriu[i-1][j-1]){
+            comptador++
+        }
+        if(matriu[i+1][j+1]){
+            comptador++;
+        }
+        if(matriu[i][j-1]){
+            comptador++;
+        }
+        if(matriu[i][j+1]){
+            comptador++;
+        }
+        if(matriu[i-1][j]){
+            comptador++;
+        }
+        if(matriu[i+1][j]){
+            comptador++;
+        }
+
+    }
 
