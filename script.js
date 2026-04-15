@@ -64,7 +64,7 @@ function MostrarRespostes() {
                     if (resposta[i][j] === 1) div.style.color = "#007fff"
                     if (resposta[i][j] === 2) div.style.color = "#008a41"
                     if (resposta[i][j] === 3) div.style.color = "#d50030"
-                    if (resposta[i][j] === 4) div.style.color = "#0e008a"
+                    if (resposta[i][j] === 4) div.style.color = "#1700df"
                     if (resposta[i][j] === 5) div.style.color = "#7600b1"
                     if (resposta[i][j] === 6) div.style.color = "#00a598"
                     if (resposta[i][j] === 7) div.style.color = "#000000"
@@ -124,7 +124,7 @@ function renderitzar() {
                             if(numero === 1) p.style.color = "#007fff"
                             if (numero === 2) p.style.color = "#008a41"
                             if (numero === 3) p.style.color = "#d50030"
-                            if (numero === 4) p.style.color = "#0e008a"
+                            if (numero === 4) p.style.color = "#1700df"
                             if (numero === 5) p.style.color = "#7600b1"
                             if (numero === 6) p.style.color = "#00a598"
                             if (numero === 7) p.style.color = "#000000"
@@ -134,8 +134,9 @@ function renderitzar() {
                             div.appendChild(p);
 
                         }
+
                     }
-                    if (cellsPolsats+banderesPolsades === mida*mida){
+                    if (cellsPolsats === mida*mida){
                         document.getElementById("missatges").innerHTML = "Has guanyat!";
                         MostrarRespostes();
                     }
