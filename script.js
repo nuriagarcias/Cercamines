@@ -9,7 +9,7 @@ let cellsPolsats= 0
 inicialitzarMatriu1();
 renderitzar();
 
-
+// Funció que calcula la primera matriu
 function inicialitzarMatriu1() {
 
     for (let i = 0; i < mida; i++) {
@@ -45,10 +45,10 @@ function colocarMines(){
     renderitzar();
 }
 
+// Funció que calcularà la segona matriu que surt cuando acaba la partida
 function MostrarRespostes() {
     const container = document.getElementById('grid-container');
-    container.innerHTML = ""; // Esborrem l'anterior
-
+    container.innerHTML = "";
     for (let i = 0; i < mida; i++) {
         for (let j = 0; j < mida; j++) {
             const div = document.createElement('div');
@@ -79,11 +79,7 @@ function MostrarRespostes() {
 }
 
 
-// function netejar() {
-//     inicialitzarMatriu1();
-//
-//     renderitzar();
-// }
+
 
 // Aquesta funció "dibuixa" els DIVs a l'HTML
 function renderitzar() {
@@ -173,8 +169,6 @@ function renderitzar() {
 
                         }
 
-
-
                     }
 
                 })
@@ -204,6 +198,7 @@ function renderitzar() {
 
 }
 
+// Funció que calcula les cel·les d'avora
 function calcular(i, j) {
     cellsPolsats++
 
@@ -236,6 +231,7 @@ function calcular(i, j) {
 
 }
 
+// Nom explicatiu
 function analitzarFinal(){
 
     let comptador = 0;
